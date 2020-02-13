@@ -19,15 +19,21 @@ namespace wall
         List<string> pathlist = new List<string>();
         string filename = "";
         public static string pathvalue = "";
-
+        //유튜브 링크를 받기위한 프롬포트을 위한 변수
+        public static string input = "";
 
         public static bool m_bFixed = false;
 
         public Form1()
-        {
+        {   
+            
+            //MessageBox.Show(Convert.ToString(System.Windows.Forms.Screen.AllScreens.Length));
             InitializeComponent();
+
+            // webBrowser1.Navigate(new Uri("https://www.youtube.com/embed/yqtCGojXEpM?autoplay=1"));
         }
 
+        //파일 오프너
         private void input_button_Click(object sender, EventArgs e)
         {
             //string filepath = "C:\\movie\\1.mp4";
@@ -66,12 +72,13 @@ namespace wall
                
 
             }
+
             
-            
+
             
             
         }
-
+        //리스트을 클릭할 경우 파일을 불러왔을 때 저장한 것의 경로를 불러와서 윈도우 미디어에 미리보기 형식으로 띄움
         private void listView1_Click(object sender, EventArgs e)
         {
             try { 
@@ -118,7 +125,8 @@ namespace wall
             Dispose();
             Application.Exit();
         }
-
+        //트레이 버튼을 만들기 위한 함수 
+        //Hide가 되면 form화면은 사라지고 트레이 화면에 표시
         private void NotifyTest_Resize(object sender, EventArgs e)
         {
             if(this.WindowState == FormWindowState.Minimized)
@@ -127,12 +135,36 @@ namespace wall
                 notifyIcon1.Visible = true;
             }
         }
-
+        //트레이로 간 버튼을 더블클릭할 경우 다시 윈폼이 나타난다.
         private void notify_doubleClk(object sender, EventArgs e)
         {
             Show();
             this.WindowState = FormWindowState.Normal;
             notifyIcon1.Visible = false;
         }
+        
+        //youtube로 백그라운드 재생을 위해서 만든 버튼
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string str = "https://www.youtube.com/embed/";
+            input = Microsoft.VisualBasic.Interaction.InputBox("유튜브 링크 입력", "YouTube Link input prompt", "", 0, 0);
+            if(input.Length == 0)
+            {
+                MessageBox.Show("유튜브 링크를 제대로 입력해주세요");
+            }
+            else if(input.Contains(str) == false)
+            {
+                MessageBox.Show("유튜브 링크를 제대로 입력해주세요");
+            }
+            else
+            {
+                Form3 form3 = new Form3();
+                form3.Show();
+
+            }
+
+        }
+
+        
     }
 }

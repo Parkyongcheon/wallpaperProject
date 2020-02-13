@@ -54,7 +54,6 @@
             this.MinimizeBox = false;
             this.Name = "Form2";
             this.Text = "Form2";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);

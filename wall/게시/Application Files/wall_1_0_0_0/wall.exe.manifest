@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="wall.exe" version="1.0.0.0" publicKeyToken="46afb2e6aedc676c" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="wall" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="wall.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC 매니페스트 옵션
+          Windows 사용자 계정 컨트롤 수준을 변경하려면 
+          requestedExecutionLevel 노드를 다음 중 하나로 바꾸세요.
+
+          <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+          <requestedExecutionLevel level="requireAdministrator" uiAccess="false" />
+          <requestedExecutionLevel level="highestAvailable" uiAccess="false" />
+
+          이전 버전과의 호환성을 위해 파일 및 레지스트리 가상화를 사용하려면 
+          requestedExecutionLevel 노드를 삭제하세요.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="AxInterop.WMPLib.dll" size="53760">
+      <assemblyIdentity name="AxInterop.WMPLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>h+DvZcGda1kChv7zdT4WuMhF2LrVvOEnW8NzTp1ZbpY=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.WMPLib.dll" size="330752">
+      <assemblyIdentity name="Interop.WMPLib" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>g2ZaYt8ugaIdZbmJc4Jl5bISVGYcMDyVNbhJWk77Kys=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="wall.exe" size="233440">
+      <assemblyIdentity name="wall" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Fs+MMTqUkY7ZQLPTyD3vbzFyMhtI2W26/+I5gu3lFpc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="wall.exe.config" size="189">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>R+Wg8QGvQVHX8T0ta/qbhH1bXkqY0fRnS3wBV3J0bN8=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=DESKTOP-6STICMD\kopp2" issuerKeyHash="1a92b0cf07a709b808f71302bd78a9a82263774c" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>fdc4M6ojQOyKAu7I/8xwq7HoBKSQs0KtdN1GL/bsFeE=</DigestValue></Reference></SignedInfo><SignatureValue>EDEcpfHNiwqKa7HdlZ0zRRU8nSi3olaPyKN0wlmexJ854G+jLylk65XfFLXvNs3gcRgHohavpBXlc4dGJY/9KCENjmgkO2vtgk/ccOb4vQ8rHvL1quIfSdBvZBDfNK08xTK46hMsxm5rDXRHiFYfI1dZc0uyRXGyITuR4vSvGJo=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>ojUJ0YJQqc5QER8vRHgsBY27FCrneL41mm8daqgLOkyT3n0biwahWseH6xiz6BV/0jdNYRmYtZi2VkA6GMjLNbt/GImZkqD69hQFmYvujxxC0xMKsnR0mzg8s7uj/UNadXV6zwHagXp/1JMeE/Vi7IauTVEBEEzxSG5ja3gXXKE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="e115ecf62f46dd74ad42b390a404e8b1ab70ccffc8ee028aec4023aa3338d77d" Description="" Url=""><as:assemblyIdentity name="wall.exe" version="1.0.0.0" publicKeyToken="46afb2e6aedc676c" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=DESKTOP-6STICMD\kopp2</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>J3aXY1GUwlMj3R9Fw6yFjDvmczL3op6TKHgz26q/o48=</DigestValue></Reference></SignedInfo><SignatureValue>lIJF//AMUANnTPo9E3qxfcBxakB+D4/u0qvlZc48J4Ad5+Lr5rBOWB5cmXCiqeIaBGXRiszBFxARdlXykMtMUIiCLrmRXaO0odgLQynHIr/JtBKPeAe6883cHOmbPydaodbReemHp0yJrSomUGHxLT5xnvGi/RugBQj4RZcZmkc=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>ojUJ0YJQqc5QER8vRHgsBY27FCrneL41mm8daqgLOkyT3n0biwahWseH6xiz6BV/0jdNYRmYtZi2VkA6GMjLNbt/GImZkqD69hQFmYvujxxC0xMKsnR0mzg8s7uj/UNadXV6zwHagXp/1JMeE/Vi7IauTVEBEEzxSG5ja3gXXKE=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB7TCCAVagAwIBAgIQf+n3R2SIyYhP2aNcZJv/tzANBgkqhkiG9w0BAQsFADA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtADYAUwBUAEkAQwBNAEQAXABrAG8AcABwADIwHhcNMjAwMjA2MDcxMzQ1WhcNMjEwMjA1MTMxMzQ1WjA1MTMwMQYDVQQDHioARABFAFMASwBUAE8AUAAtADYAUwBUAEkAQwBNAEQAXABrAG8AcABwADIwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAKI1CdGCUKnOUBEfL0R4LAWNuxQq53i+NZpvHWqoCzpMk959G4sGoVrHh+sYs+gVf9I3TWEZmLWYtlZAOhjIyzW7fxiJmZKg+vYUBZmL7o8cQtMTCrJ0dJs4PLO7o/1DWnV1es8B2oF6f9STHhP1YuyGrk1RARBM8UhuY2t4F1yhAgMBAAEwDQYJKoZIhvcNAQELBQADgYEATIY3AeCFXM3luXE/6dya23k06pZqogXTdbtyikhBOxCLMjQ2H6f3xHpuU9v3FZSd/woJpfnVyCNuFjUhRpbFwUdpBL86FCHabnrjHngKyPamOxooiWcsZUznLHAOwe84dz9uFu6Yl4q8ciwXoDWnMGZOvfYiE94ZAYu40696+QA=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>

@@ -36,6 +36,7 @@
             this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -45,7 +46,7 @@
             this.input_button.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.input_button.Location = new System.Drawing.Point(139, 12);
             this.input_button.Name = "input_button";
-            this.input_button.Size = new System.Drawing.Size(75, 200);
+            this.input_button.Size = new System.Drawing.Size(75, 100);
             this.input_button.TabIndex = 0;
             this.input_button.Text = "File Input";
             this.input_button.UseVisualStyleBackColor = true;
@@ -64,9 +65,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(139, 238);
+            this.button2.Location = new System.Drawing.Point(139, 118);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 200);
+            this.button2.Size = new System.Drawing.Size(75, 100);
             this.button2.TabIndex = 3;
             this.button2.Text = "Set Up";
             this.button2.UseVisualStyleBackColor = true;
@@ -88,11 +89,22 @@
             this.notifyIcon1.Visible = true;
             this.notifyIcon1.DoubleClick += new System.EventHandler(this.notify_doubleClk);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(139, 224);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 100);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Youtube";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 443);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.axWindowsMediaPlayer1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.listView1);
@@ -115,6 +127,7 @@
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
+        private System.Windows.Forms.Button button1;
     }
 }
 
